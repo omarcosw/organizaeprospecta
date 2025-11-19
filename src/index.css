@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Background colors - Light professional theme */
+    --background: 0 0% 100%; /* #ffffff - Clean white */
+    --background-elevated: 210 16% 96%; /* #f5f7fb - Subtle blue-gray */
+    --foreground: 210 12% 16%; /* #1f2937 - Dark gray for text */
+
+    /* Card colors */
+    --card: 0 0% 100%; /* #ffffff */
+    --card-foreground: 210 12% 16%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 12% 16%;
+
+    /* Primary - Professional Blue */
+    --primary: 217 91% 60%; /* #3b82f6 - Vibrant but professional */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary - Complementary purple */
+    --secondary: 258 90% 56%; /* #7c3aed - Elegant purple */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Success - Professional Green */
+    --success: 142 76% 36%; /* #15803d - Deeper green */
+    --success-foreground: 0 0% 100%;
+
+    /* Muted surfaces */
+    --muted: 210 16% 92%; /* #ebedf5 - Light gray */
+    --muted-foreground: 210 12% 50%; /* #6b7280 - Medium gray */
+
+    /* Accent */
+    --accent: 217 91% 60%; /* #3b82f6 */
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%; /* #ef4444 */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border */
+    --border: 210 16% 88%; /* #dbeafe - Light blue border */
+    --input: 210 16% 96%;
+    --ring: 217 91% 60%;
+
+    /* Sidebar colors */
+    --sidebar-background: 210 16% 96%; /* #f5f7fb */
+    --sidebar-foreground: 210 12% 25%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 16% 92%;
+    --sidebar-accent-foreground: 217 91% 60%;
+    --sidebar-border: 210 16% 88%;
+    --sidebar-ring: 217 91% 60%;
+
+    /* Chart colors */
+    --chart-1: 217 91% 60%; /* Blue */
+    --chart-2: 258 90% 56%; /* Purple */
+    --chart-3: 142 76% 36%; /* Green */
+    --chart-4: 45 93% 50%; /* Yellow */
+    --chart-5: 340 82% 52%; /* Pink */
+
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Shadows - Softer for light theme */
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.08);
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.02);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+
+    /* Transitions */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
